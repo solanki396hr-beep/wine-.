@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0b090c;
+    color: #f5f2eb;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #120e14;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a1622;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6e2233;
+}
+
+/* Glassmorphism card styles */
+.glass-panel {
+  background: rgba(26, 20, 27, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(114, 47, 55, 0.3);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f7e7b4 0%, #d4af37 50%, #aa8022 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wine-gradient-bg {
+  background: radial-gradient(circle at 50% 20%, rgba(131, 42, 63, 0.25) 0%, rgba(11, 9, 12, 1) 75%);
+}
+
